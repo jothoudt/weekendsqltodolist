@@ -11,5 +11,9 @@ th{
 }
 
 .green{
-    background-color: green;
+    background-color: limegreen;
+}
+.deleteTaskButton{
+    color: red;
+    font-weight: bold;
 }
