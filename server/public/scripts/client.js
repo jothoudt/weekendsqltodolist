@@ -37,13 +37,15 @@ function displayTasks(){
         for(let i=0; i<response.length; i++ ){
             let completedHTML=`<button data-id=${response[i].id} class="completeTaskButton">Complete</button>`
             let classCss=`<tr class="white">`
+            let thClass=`<th>`
             if(response[i].completed === true){
-            completedHTML=`<span id="check">&#10003;</span>`;
+            completedHTML=`<span class="check">&#10003;</span>`;
              classCss= `<tr class="green">`
+             thClass= `<th class="crossedOut">`
             }
             $('#taskOutput').append(`
             ${classCss}
-            <th>${response[i].task}</th>
+            ${thClass}${response[i].task}</th>
             <th>${completedHTML}</th>
             <button data-id=${response[i].id} class="completeTaskButton">Complete</button>
             <th><button data-id=${response[i].id} class="deleteTaskButton">X</button></th>

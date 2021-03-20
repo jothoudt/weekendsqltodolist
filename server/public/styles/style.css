@@ -1,19 +1,42 @@
+body{
+    background-color: sandybrown;
+}
 header{
-    background-color: gainsboro;
+    background-color: honeydew;
+    text-align: center;
+}
+#inputDiv{
+    text-align: center;
+}
+#tableTitle{
+    text-align: center;
 }
 table{
     width: 90%;
     border: 2px solid black;
     border-collapse: collapse;
+    background-color: honeydew;    
 }
 th{
     border: 2px solid black;
 }
-
+thead{
+    background-color: honeydew;
+    font-size: x-large;
+}
+.white{
+    background-color: honeydew;
+    font-size: x-large;
+}
 .green{
     background-color: limegreen;
+    font-size: x-large;
+    
 }
 .deleteTaskButton{
     color: red;
     font-weight: bold;
+}
+.crossedOut{
+    text-decoration:line-through;
 }
