@@ -37,7 +37,7 @@ function displayTasks(){
         for(let i=0; i<response.length; i++ ){
             let completedHTML=`<button data-id=${response[i].id} class="completeTaskButton">Complete</button>`
             if(response[i].completed === true){
-            completedHTML="COMPLETED";
+            completedHTML=`<span id="check">&#10003;</span>`;
             }
             $('#taskOutput').append(`
             <tr>
