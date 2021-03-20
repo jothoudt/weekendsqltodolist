@@ -31,11 +31,11 @@ function displayTasks(){
     }).then(function(response){
         console.log('response from server', response);
         for(let i=0; i<response.length; i++ ){
-            $('#outputDiv').append(`
+            $('#taskOutput').append(`
             <tr>
-            <td>${response[i].task}</td>
-            <td><button data-id=${response[i].id} class="completeTaskButton">Complete</button></td>
-            <td><button data-id=${response[i].id} class="deleteTaskButton">X</button</td>
+            <th>${response[i].task}</th>
+            <th><button data-id=${response[i].id} class="completeTaskButton">Complete</button></th>
+            <th><button data-id=${response[i].id} class="deleteTaskButton">X</button</th>
             </tr>
             `);
         }
