@@ -18,6 +18,7 @@ function submitTask(){
         data: newTask
     }).then(function(response){
         console.log('response from server', response)
+        displayTasks();
     }).catch(function(error){
         console.log('error in POST', error);
         alert('unable to add task')
@@ -29,6 +30,7 @@ function displayTasks(){
         method: 'GET',
         url: '/listofthings'
     }).then(function(response){
+        $('#taskOutput').empty();
         console.log('response from server', response);
         for(let i=0; i<response.length; i++ ){
             $('#taskOutput').append(`
