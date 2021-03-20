@@ -35,11 +35,16 @@ function displayTasks(){
         $('#taskOutput').empty();
         console.log('response from server', response);
         for(let i=0; i<response.length; i++ ){
+            let completedHTML=`<button data-id=${response[i].id} class="completeTaskButton">Complete</button>`
+            if(response[i].completed === true){
+            completedHTML="COMPLETED";
+            }
             $('#taskOutput').append(`
             <tr>
             <th>${response[i].task}</th>
-            <th><button data-id=${response[i].id} class="completeTaskButton">Complete</button></th>
-            <th><button data-id=${response[i].id} class="deleteTaskButton">X</button</th>
+            <th>${completedHTML}</th>
+            <button data-id=${response[i].id} class="completeTaskButton">Complete</button>
+            <th><button data-id=${response[i].id} class="deleteTaskButton">X</button></th>
             </tr>
             `);
         }
