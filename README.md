@@ -23,5 +23,10 @@ Your project description goes here. What problem did you solve? How did you solv
 [x] create delete function
 [x] ajax delete call
 [x] create DELETE in the router
+[x] create clickhandler for complete function
+[x] create AJAX update call
+[x] create update in router
+[x] add styling to items completed
+[x] add some styling
 
 Additional README details can be found [here](https://github.com/PrimeAcademy/readme-template/blob/master/README.md).

@@ -37,6 +37,8 @@ function displayTasks(){
         for(let i=0; i<response.length; i++ ){
             let completedHTML=`<button data-id=${response[i].id} class="completeTaskButton">Complete</button>`
             let classCss=`<tr class="white">`
+            let count=  Number([i])+1
+            console.log(count);
             let thClass=`<th>`
             if(response[i].completed === true){
             completedHTML=`<span class="check">&#10003;</span>`;
@@ -45,7 +47,7 @@ function displayTasks(){
             }
             $('#taskOutput').append(`
             ${classCss}
-            ${thClass}${response[i].task}</th>
+            ${thClass}${count}. ${response[i].task}</th>
             <th>${completedHTML}</th>
             <button data-id=${response[i].id} class="completeTaskButton">Complete</button>
             <th><button data-id=${response[i].id} class="deleteTaskButton">X</button></th>
