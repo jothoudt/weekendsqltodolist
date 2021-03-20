@@ -19,5 +19,9 @@ Your project description goes here. What problem did you solve? How did you solv
 [x] call an AJAX get route in client
 [x] create a GET route in router
 [x] display get route in the DOM
+[x] create clickhandler for delete function
+[x] create delete function
+[x] ajax delete call
+[x] create DELETE in the router
 
 Additional README details can be found [here](https://github.com/PrimeAcademy/readme-template/blob/master/README.md).
