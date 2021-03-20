@@ -4,6 +4,8 @@ function readyNow(){
     console.log('in JQ');
     displayTasks();
     $('#submitTaskButton').on('click', submitTask);
+    $('#taskOutput').on('click', '.completeTaskButton', completeTask);
+    $('#taskOutput').on('click', '.deleteTaskButton', deleteTask);
 };
 
 function submitTask(){
@@ -44,4 +46,12 @@ function displayTasks(){
     }).catch(function(error){
         console.log('error in GET', error);
     })
+}
+
+function deleteTask(){
+    console.log('in delete task');
+}
+
+function completeTask(){
+    console.log('in completeTask');
 }
