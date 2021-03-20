@@ -9,3 +9,7 @@ table{
 th{
     border: 2px solid black;
 }
+
+.green{
+    background-color: green;
+}

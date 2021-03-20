@@ -36,11 +36,13 @@ function displayTasks(){
         console.log('response from server', response);
         for(let i=0; i<response.length; i++ ){
             let completedHTML=`<button data-id=${response[i].id} class="completeTaskButton">Complete</button>`
+            let classCss=`<tr class="white">`
             if(response[i].completed === true){
             completedHTML=`<span id="check">&#10003;</span>`;
+             classCss= `<tr class="green">`
             }
             $('#taskOutput').append(`
-            <tr>
+            ${classCss}
             <th>${response[i].task}</th>
             <th>${completedHTML}</th>
             <button data-id=${response[i].id} class="completeTaskButton">Complete</button>
@@ -71,6 +73,7 @@ function deleteTask(){
 function completeTask(){
     console.log('in completeTask');
     let completeId= $(this).data('id');
+    $(this).addClass('green')
     $.ajax({
         method: 'PUT',
         url: '/listofthings/' + completeId
