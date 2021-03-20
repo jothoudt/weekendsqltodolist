@@ -50,6 +50,17 @@ function displayTasks(){
 
 function deleteTask(){
     console.log('in delete task');
+    let taskId= $(this).data('id')
+    $.ajax({
+        method: 'DELETE',
+        url: '/listofthings/' + taskId,
+    }).then(function(response){
+        console.log('back from Delete', response)
+        displayTasks();
+    }).catch(function(response){
+        console.log(err);
+        alert('did not delete')
+    })
 }
 
 function completeTask(){
