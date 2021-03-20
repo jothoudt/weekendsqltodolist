@@ -36,4 +36,15 @@ router.delete('/:id', (req,res) =>{
     })
 })
 
+router.put('/:id', (req,res) =>{
+    let queryString=`UPDATE "toDo" SET "completed"=true WHERE "id"=$1;`
+    pool.query(queryString,[req.params.id]).then((results)=>{
+        res.sendStatus(200);
+    })
+    .catch((err)=>{
+        console.log(err);
+        res.sendStatus(500);
+    })
+})
+
 module.exports = router;

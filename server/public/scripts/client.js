@@ -50,7 +50,7 @@ function displayTasks(){
 
 function deleteTask(){
     console.log('in delete task');
-    let taskId= $(this).data('id')
+    let taskId= $(this).data('id');
     $.ajax({
         method: 'DELETE',
         url: '/listofthings/' + taskId,
@@ -65,4 +65,15 @@ function deleteTask(){
 
 function completeTask(){
     console.log('in completeTask');
+    let completeId= $(this).data('id');
+    $.ajax({
+        method: 'PUT',
+        url: '/listofthings/' + completeId
+    }).then(function(response){
+        console.log('back from PUT:', response);
+        displayTasks();
+    }).catch(function(err){
+        console.log(err);
+        alert('did not update');
+    })
 }
