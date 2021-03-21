@@ -11,14 +11,23 @@ header{
 #tableTitle{
     text-align: center;
 }
+caption{
+    margin-top: 10px;
+    font-size: xx-large;
+    background-color: honeydew;
+    border-bottom: 2px dotted blue;
+    border-left: 3px solid red
+}
 table{
     width: 90%;
-    border: 2px solid black;
     border-collapse: collapse;
     background-color: honeydew;    
 }
+tr{
+    border-left: 3px solid red;
+}
 th{
-    border: 2px solid black;
+    border-bottom: 2px dotted blue;
 }
 thead{
     background-color: honeydew;

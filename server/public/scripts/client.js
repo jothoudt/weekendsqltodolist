@@ -92,6 +92,8 @@ function submitTask(){
         data: newTask
     }).then(function(response){
         console.log('response from server', response)
+        $('#taskToDo').val('');
+        $('#taskToDo').empty();
         displayTasks();
     }).catch(function(error){
         console.log('error in POST', error);
