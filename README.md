@@ -28,5 +28,8 @@ Your project description goes here. What problem did you solve? How did you solv
 [x] create update in router
 [x] add styling to items completed
 [x] add some styling
+[x] create a time stamp in complete function
+[x] add a column to the table
+[x] append time stamp to the DOM
 
 Additional README details can be found [here](https://github.com/PrimeAcademy/readme-template/blob/master/README.md).

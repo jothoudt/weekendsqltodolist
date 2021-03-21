@@ -28,6 +28,7 @@ tr{
 }
 th{
     border-bottom: 2px dotted blue;
+    font-family: fantasy, Arial, Helvetica, sans-serif;
 }
 thead{
     background-color: honeydew;
