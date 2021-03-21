@@ -81,7 +81,7 @@ function displayTasks(){
             ${thClass}${count}. ${response[i].task}</th>
             <th>${completedHTML}</th>
             <th>${timeHtml}<th>
-            <th><button data-id=${response[i].id} class="deleteTaskButton">X</button></th>
+            <button data-id=${response[i].id} class="deleteTaskButton">X</button>
             </tr>
             `);//end append
         }//end for
