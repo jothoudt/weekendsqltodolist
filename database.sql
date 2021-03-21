@@ -3,3 +3,5 @@ CREATE TABLE "toDo" (
 "task" VARCHAR(250) NOT NULL,
 "completed" BOOLEAN DEFAULT FALSE
 );
+
+ALTER TABLE "toDo" ADD COLUMN "completeTime" VARCHAR(100);

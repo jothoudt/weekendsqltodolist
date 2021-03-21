@@ -11,11 +11,20 @@ function readyNow(){
 function completeTask(){
     console.log('in completeTask');
     let completeId= $(this).data('id');
+    let time= new Date().toLocaleTimeString([],{hour:'2-digit', minute:'2-digit'});
+    let date =new Date().toLocaleDateString();
+    let stamp = time + ' ' + date;
+    console.log(stamp);
+    let newObject={
+        completeTime: stamp
+    }
+    console.log(newObject.completeTime);
     $(this).addClass('green')
     //ajax put
     $.ajax({
         method: 'PUT',
-        url: '/listofthings/' + completeId
+        url: '/listofthings/' + completeId,
+        data: newObject
     }).then(function(response){
         console.log('back from PUT:', response);
         displayTasks();
@@ -52,6 +61,7 @@ function displayTasks(){
         console.log('response from server', response);
         //loop through tasks
         for(let i=0; i<response.length; i++ ){
+            let timeHtml= 'INCOMPLETE'
             //variable to display complete button or check mark
             let completedHTML=`<button data-id=${response[i].id} class="completeTaskButton">Complete</button>`
             //variable to set the class of tr
@@ -64,12 +74,13 @@ function displayTasks(){
             completedHTML=`<span class="check">&#10003;</span>`;
              classCss= `<tr class="green">`
              thClass= `<th class="crossedOut">`
+             timeHtml= `${response[i].completeTime}`
             }//end if
             $('#taskOutput').append(`
             ${classCss}
             ${thClass}${count}. ${response[i].task}</th>
             <th>${completedHTML}</th>
-            <button data-id=${response[i].id} class="completeTaskButton">Complete</button>
+            <th>${timeHtml}<th>
             <th><button data-id=${response[i].id} class="deleteTaskButton">X</button></th>
             </tr>
             `);//end append
@@ -83,7 +94,8 @@ function submitTask(){
     //create a variable to send to server
     let newTask={
         task:$('#taskToDO').val(),
-        completed: false
+        completed: false,
+        completeTime: null
     }
     //ajax POST
     $.ajax({
@@ -92,8 +104,8 @@ function submitTask(){
         data: newTask
     }).then(function(response){
         console.log('response from server', response)
-        $('#taskToDo').val('');
-        $('#taskToDo').empty();
+        $('#taskToDO').val('');
+        $('#taskToDO').empty();
         displayTasks();
     }).catch(function(error){
         console.log('error in POST', error);
