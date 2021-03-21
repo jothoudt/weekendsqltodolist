@@ -37,18 +37,33 @@ function completeTask(){
 function deleteTask(){
     console.log('in delete task');
     let taskId= $(this).data('id');
-    //ajax DELETE call
-    $.ajax({
-        method: 'DELETE',
-        url: '/listofthings/' + taskId,
-    }).then(function(response){
-        console.log('back from Delete', response)
-        displayTasks();
-    }).catch(function(response){
-        console.log(err);
-        alert('did not delete')
-    })//end ajax delete
-}//end deleteTask
+    swal({
+        title: "WARNING",
+        text: "Are you sure you want to delete this task?",
+        icon: "warning",
+        buttons: true,
+        dangerMode: true
+      }).then((deleteTask)=>{
+        if (deleteTask) {
+          swal("Your task has been deleted.",{
+            icon: "success",
+          });
+          //ajax DELETE call
+          $.ajax({
+          method: 'DELETE',
+          url: '/listofthings/' + taskId,
+          }).then(function(response){
+          console.log('back from Delete', response)
+          displayTasks();
+          }).catch(function(response){
+          console.log(err);
+          alert('did not delete');
+          })//end ajax delete
+        }else{
+         swal("Your task has not been deleted");
+        }
+        });
+    }//end deleteTask
 
 function displayTasks(){
     //ajax GET call
