@@ -80,12 +80,8 @@ function displayTasks(){
             ${classCss}
             ${thClass}${count}. ${response[i].task}</th>
             <th>${completedHTML}</th>
-<<<<<<< HEAD
-            <th><button data-id=${response[i].id} class="deleteTaskButton">X</button></th>
-=======
             <th>${timeHtml}<th>
             <button data-id=${response[i].id} class="deleteTaskButton">X</button>
->>>>>>> timecompleted
             </tr>
             `);//end append
         }//end for
