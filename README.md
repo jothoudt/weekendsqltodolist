@@ -25,38 +25,27 @@ Specific Requirements to meet
 [sample](sample.jpeg)
 
 
-[Project Instructions](./INSTRUCTIONS.md), this line may be removed once you have updated the README.md
-
 The process:
 ---
 
-[x]set up files and folders
-[x]spin up server
-[x]create a database
-[x]create a pool to connect to database
-[x]create a router
-[x] create a task input and submit button in html
-[x]create a clickhandler for submitting task
-[x]call a function to add new task
-[x]create an AJAX POST route in client
-[x]create a POST route in the router
-[x] call an AJAX get route in client
-[x] create a GET route in router
-[x] display get route in the DOM
-[x] create clickhandler for delete function
-[x] create delete function
-[x] ajax delete call
-[x] create DELETE in the router
-[x] create clickhandler for complete function
-[x] create AJAX update call
-[x] create update in router
-[x] add styling to items completed
-[x] add some styling
-[x] create a time stamp in complete function
-[x] add a column to the table
-[x] append time stamp to the DOM
-[x] add another column to the table to capture time a task is completed
-[x] append timestamp to DOM
-[x] add an alert when deleting a task
+- [x]set up files, folders, server, database
+- [x]create a pool to connect to database
+- [x]create a router
+- [x] create a task input and submit button in html
+- [x]create a clickhandler for submitting task
+- [x]creat a function to add new task
+- [x]create a POST route client & router
+- [x] call a GET route in client & router
+- [x] display get route in the DOM
+- [x] create clickhandler for delete function
+- [x] create delete function
+- [x] create DELETE route client & router
+- [x] create clickhandler for complete function
+- [x] create PUT route client & router to update
+- [x] add styling 
+- [x] create a time stamp in complete function
+- [x] add another column to the table to capture time a task is completed
+- [x] append time stamp to the DOM
+- [x] add an alert when deleting a task
 
 Additional README details can be found [here](https://github.com/PrimeAcademy/readme-template/blob/master/README.md).
