@@ -1,10 +1,34 @@
-# Project Name
+
+To Do APP
+==
+
+Technologies Used
+-
+
+- JAVASCRIPT
+- JQUERY
+- NODE
+- Express
+- SQL
+
+Specific Requirements to meet
+-
+
+* Create a front end experience that allows a user to create a task.
+* When the Task is created, it should be stored inside of a database (SQL)
+* Whenever a Task is created the front end should refresh to show all tasks that need to be completed.
+* Each Task should have an option to 'Complete' or 'Delete'.
+* When a Task is complete, its visual representation should change on the front end. For example, the background of the task container could change from gray to green. The complete option should be  'checked off'. Each of these are accomplished in CSS, but will need to hook into logic to know whether or not the task is complete.
+* Whether or not a Task is complete should also be stored in the database.
+* Deleting a Task should remove it both from the front end as well as the Database.
+
+[sample](sample.jpeg)
+
 
 [Project Instructions](./INSTRUCTIONS.md), this line may be removed once you have updated the README.md
 
-## Description
-
-Your project description goes here. What problem did you solve? How did you solve it?
+The process:
+---
 
 [x]set up files and folders
 [x]spin up server
@@ -31,5 +55,8 @@ Your project description goes here. What problem did you solve? How did you solv
 [x] create a time stamp in complete function
 [x] add a column to the table
 [x] append time stamp to the DOM
+[x] add another column to the table to capture time a task is completed
+[x] append timestamp to DOM
+[x] add an alert when deleting a task
 
 Additional README details can be found [here](https://github.com/PrimeAcademy/readme-template/blob/master/README.md).
