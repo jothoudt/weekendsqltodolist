@@ -28,13 +28,13 @@ Specific Requirements to meet
 The process:
 ---
 
-- [x]set up files, folders, server, database
-- [x]create a pool to connect to database
-- [x]create a router
+- [x] set up files, folders, server, database
+- [x] create a pool to connect to database
+- [x] create a router
 - [x] create a task input and submit button in html
-- [x]create a clickhandler for submitting task
-- [x]creat a function to add new task
-- [x]create a POST route client & router
+- [x] create a clickhandler for submitting task
+- [x] creat a function to add new task
+- [x] create a POST route client & router
 - [x] call a GET route in client & router
 - [x] display get route in the DOM
 - [x] create clickhandler for delete function
