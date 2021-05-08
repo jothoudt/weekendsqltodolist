@@ -22,7 +22,7 @@ Specific Requirements to meet
 * Whether or not a Task is complete should also be stored in the database.
 * Deleting a Task should remove it both from the front end as well as the Database.
 
-[sample](sample.jpeg)
+![sample](sample.jpeg)
 
 
 The process:
